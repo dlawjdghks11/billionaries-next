@@ -1,10 +1,5 @@
 import axios from "axios";
-import { URL } from "../page";
-
-interface Props {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+import { URL } from "../../lib/constants";
 
 interface Detail {
   id: string;
@@ -28,9 +23,8 @@ const getDetail = async (id: string) => {
   return res.data;
 };
 
-const DetailPage = async ({ params }: Props) => {
-  const id = params.id;
-  const data = await getDetail(id);
+const DetailPage = async ({ params }) => {
+  const data = await getDetail(params.id);
 
   console.log(data);
   return <div>{data.name}</div>;

@@ -1,8 +1,7 @@
 import axios from "axios";
 import Link from "next/link";
 import styles from "../styles/home.module.css";
-
-export const URL = "https://billions-api.nomadcoders.workers.dev/";
+import { URL } from "../lib/constants";
 
 interface BillionariesList {
   id: string;

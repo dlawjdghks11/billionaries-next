@@ -13,7 +13,7 @@ interface BillionariesList {
 
 const Home = async () => {
   const res = await axios.get<BillionariesList[]>(URL);
-  console.log(res.data[0].squareImage);
+
   return (
     <div className={styles.container}>
       {res.data.map((list) => (
